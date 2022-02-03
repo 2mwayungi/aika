@@ -1,0 +1,697 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block content %}
+
+    {% image self.banner_image width-3560 as img %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.footer__copyright {
+  border-top: 1px solid #fff !important;
+}
+#djDebug{
+    display: none !important;
+}
+.footer__copyright {
+
+  padding-top: 2rem;
+  text-align: center !important;
+}
+.composition__photo {
+    width:100% !important;
+    opacity: 0.9;
+}
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+  margin-top: 1.7rem !important;
+}
+
+ .section-about {
+   background-color: #f7f7f7;
+   padding: 25rem 0;
+   margin-top: -20vh; }
+   @media only screen and (max-width: 56.25em) {
+      .section-about {
+        padding: 25rem 0 !important; } }
+
+  .footer__link:link, .footer__link:visited {
+    color:unset !important;
+    background-color: unset !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: unset !important;
+    transition:unset !important; }
+  .footer__link:hover, .footer__link:active {
+    color: unset !important;
+    box-shadow: none !important;
+    transform: none !important;}
+.footer__copyright {
+    
+      padding-top: 2rem;
+  }
+    .cardo{
+        box-shadow: none !important;
+        transition: unset !important;
+    }
+ .header {
+  height: 85vh;
+  background-image: url("{% static 'img/zz.jpg' %}");    
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: none !important;
+    border-radius: unset !important;
+    position: absolute;
+    z-index: unset !important;
+    transition: unset !important;
+    outline-offset:unset !important; }
+    @media only screen and (max-width: 56.25em) {
+      .composition__photo {
+        float: left;
+        position: relative;
+        width: 33.33333333%;
+        box-shadow:unset !important; } }
+
+    .composition__photo:hover {
+      outline: none !important;
+      transform: none !important;
+      box-shadow: none !mportant;
+      z-index:unset !important; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform:unset !important; }
+  c{
+
+  font-size: 56px;
+  line-height: 1.3;
+  font-weight: 300;
+}
+
+d{
+  display: block;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.6;
+}
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+ .cardo {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.cardo:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+.footer {
+  background: #152F4F;
+  color: white;
+}
+.footer .links ul {
+  list-style-type: none;
+}
+.footer .links li a {
+  color: white;
+  transition: color 0.2s;
+}
+.footer .links li a:hover {
+  text-decoration: none;
+  color: #4180CB;
+}
+.footer .about-company i {
+  font-size: 25px;
+}
+.footer .about-company a {
+  color: white;
+  transition: color 0.2s;
+}
+.footer .about-company a:hover {
+  color: #4180CB;
+}
+.footer .location i {
+  font-size: 18px;
+}
+.footer .copyright p {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+
+
+</style>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+        <!--<link rel="stylesheet" href="css/icon-font.css">-->
+        <script src="https://kit.fontawesome.com/7e98b7d9ee.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        
+        <title>NOPOVOTECH | We are a Software, Web Development & Product Design company</title>
+    </head>
+
+    <body>
+
+
+        <header class="header">
+
+
+            <div class="header__text-box">
+                <h1 class="heading-primary">
+                    <span class="c" style="font-weight: bold;">Let’s Transform Your Idea into Reality</span>
+
+                </h1>
+                                <h3 class="heading-primary">
+                
+                    <span class="d" style="font-weight: bold;">
+We are a Software, Web Development & Product Design company</span>
+                </h3>
+
+
+           
+
+         
+                 <button type="button" class="btn btn-primary btn-lg" href="https://nopovotech.com/contact/" style="background-color:#fff; color: #000; margin-top: 15px;">let’s talk </button>
+            </div>
+        </header>
+
+        <main>
+            <section class="section-about" style="background-color: #fff;">
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary" style="color:black !important; transform:none; margin-top: 4rem !important;" >
+                        WHO WE ARE
+                    </h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <h3 class="heading-tertiary u-margin-bottom-small" style="margin-top:4px !important;"> NOPOVOTECH is a Custom Software Development Company </h3>
+                        <p class="paragraph" style="margin-top: -0.5rem !important;">
+                        
+                         We are a Software Developers, Web Developers, Product Developers & Engineers solving business challenges via creating future-ready apps, websites, mobile development, UX & UI design, enterprise software development,digital solutions, IT consulting and other. Our developers build custom software for individuals,NG0'S, startups, and small to medium business.
+                     
+                      
+
+                       
+
+                        </p>
+                 
+        
+                    </div>
+                    <div class="col-1-of-2">
+                        <div class="composition">
+
+                            <img srcset="{% static 'img/ab.jpg' %}" 
+                                 
+                                 alt="Photo 1"
+                                 class="composition__photo"
+                                src="{% static 'img/ab.jpg' %}" >
+
+           
+
+                            <!--
+                            <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+                            <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
+                            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-features" style="margin-top: -8rem !important;background-image: linear-gradient(to right bottom, #1e90ff, #1e90ff);">
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary" style="background-image:!important;color:#fff!important; transform:none;">
+                        What We Do
+                    </h2>
+                </div>
+
+                
+                <div class="row">
+
+                    <div class="col-1-of-4">
+                        <div class="feature-box" style="background-color:#fff;">
+                            <i class="fas fa-laptop feature-box__icon icon-basic-world" style="background-image: linear-gradient(to right, #1e90ff, #1e90ff);"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Web Design</h3>
+                            <p class="feature-box__text" style="text-align:center !important;">
+
+                    We use the latest in technology to develop websites that focus on increasing user engagement.
+                           We analyze your business to design a website which increases conversion rates.
+             
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <div class="feature-box" style="background-color:#fff;">
+                            <i class="fas fa-cart-plus feature-box__icon icon-basic-world" style="background-image: linear-gradient(to right, #1e90ff, #1e90ff);"></i>
+                        
+                            <h3 class="heading-tertiary u-margin-bottom-small"> E-COMMERCE</h3>
+                            <p class="feature-box__text" style="text-align:center !important;">
+                               
+                            We provide the best cost-efficient services for building and generating a solid e-Commerce presence online to make your e-Commerce websites highly relevant & engaging.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <div class="feature-box" style="background-color:#fff;">
+                            <i class="fas fa-bullhorn feature-box__icon icon-basic-world" style="background-image: linear-gradient(to right, #1e90ff, #1e90ff);"></i>
+
+
+                            <h3 class="heading-tertiary u-margin-bottom-small">Digital Design</h3>
+                             <p class="feature-box__text" style="text-align:center !important;">
+
+
+Our services include Storyboarding and Concept Design, Illustrations, Logo creation, Visual Identity, Video editing and animation, Email design, UX/UI design and more.
+              
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <div class="feature-box" style="background-color:#fff;">
+                            <i class="fas fa-tools feature-box__icon icon-basic-world" style="background-image: linear-gradient(to right, #1e90ff, #1e90ff);"></i>
+
+
+                            <h3 class="heading-tertiary u-margin-bottom-small">Web Development Services</h3>
+                            <p class="feature-box__text" style="text-align:center !important;">
+                            We provide website development services that are on the cutting edge of today’s technologies. Our Web developers are versed in all Web technologies
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-tours" id="section-tours" style="background-color:#fff;">
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary" style="color:black;transform:none;">
+                        OUR WORK
+                    </h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-1-of-3">
+                      
+
+                        <div class="container">
+                          <img src="https://images.unsplash.com/photo-1642478881792-4726327bb0bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=394&q=80" alt="Avatar" class="image" style="width:100%">
+                          <div class="middle">
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                          <button type="button" class="btn btn-primary" style="background-color: primary;">Primary</button>
+                          </div>
+                        </div>
+                          </div>
+                                 
+                       
+                       </div>
+                  
+
+
+                                        <div class="col-1-of-3">
+                      
+
+                        <div class="container">
+                          <img src="https://images.unsplash.com/photo-1642478881792-4726327bb0bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=394&q=80" alt="Avatar" class="image" style="width:100%">
+                          <div class="middle">
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                          <button type="button" class="btn btn-primary" style="background-color: primary;">Primary</button>
+                          </div>
+                        </div>
+                          </div>
+                                 
+                       
+                       </div>
+
+
+                                        <div class="col-1-of-3">
+                      
+
+                        <div class="container">
+                          <img src="https://images.unsplash.com/photo-1642478881792-4726327bb0bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=394&q=80" alt="Avatar" class="image" style="width:100%">
+                          <div class="middle">
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                          <button type="button" class="btn btn-primary" style="background-color: primary;">Primary</button>
+                          </div>
+                        </div>
+                          </div>
+                                 
+                       
+                       </div>
+                </div>
+
+                <div class="u-center-text u-margin-top-huge">
+                    <!--<a href="#" class="btn btn--green">Discover all tours</a>-->
+                </div>
+            </section>
+
+ <section class="section-stories" style="background-color:#1e90ff;">
+     
+
+                <div class="u-center-text u-margin-bottom-big">
+
+                    <h2 class="heading-secondary" style="color:#fff;!important; transform:none;">
+                        Technologies we use
+                    </h2>
+                </div>
+            
+                <div class="row">
+                    <div class="col-1-of-4">
+                      
+
+                        <div class="container">
+                          <img src="{% static 'img/1.png' %}" alt="Avatar" class="image" style="width:100%; background-color:#fff;">
+
+                          </div>
+                                 
+                       
+                       </div>
+                  
+
+
+                                        <div class="col-1-of-4">
+                      
+
+                        <div class="container">
+                          <img src="{% static 'img/10.png' %}"  alt="Avatar" class="image" style="width:100%">
+
+                          </div>
+                                 
+                       
+                       </div>
+
+
+                                        <div class="col-1-of-4">
+                      
+
+                        <div class="container">
+                          <img  src="{% static 'img/c.png' %}"  alt="Avatar" class="image" style="width:100%">
+
+                          </div>
+                                 
+                       
+                       </div>
+                                                               <div class="col-1-of-4">
+                      
+
+                        <div class="container">
+                          <img src="{% static 'img/asz.png' %}" alt="Avatar" class="image" style="width:100%">
+
+                          </div>
+                                 
+                       
+                       </div>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-4">
+                      
+
+                        <div class="container">
+                          <img src="{% static 'img/b.png' %}" alt="Avatar" class="image" style="width:100%">
+                          </div>
+                                 
+                       
+                       </div>
+                  
+
+
+                                        <div class="col-1-of-4">
+                      
+
+                        <div class="container">
+                          <img src="{% static 'img/f1.png' %}"  alt="Avatar" class="image" style="width:100%">
+
+                          </div>
+                                 
+                       
+                       </div>
+
+
+                                        <div class="col-1-of-4">
+                      
+
+                        <div class="container">
+                          <img  src="{% static 'img/aa1.png' %}"  alt="Avatar" class="image" style="width:100%">
+                          <div class="middle">
+                        </div>
+                          </div>
+                                 
+                       
+                       </div>
+                                                               <div class="col-1-of-4">
+                      
+
+                        <div class="container">
+                          <img src="{% static 'img/zawadi.jpeg' %}" alt="Avatar" class="image" style="width:100%">
+
+                          </div>
+                                 
+                       
+                       </div>
+                </div>
+       
+       
+
+               <!-- <div class="u-center-text u-margin-top-huge">
+                    <a href="#" class="btn-text">Read all stories &rarr;</a>
+                </div>-->
+            </section>
+
+
+       
+            <section class="section-stories" style="background-color:#fff; padding: 10rem 0;">
+     
+
+                <div class="u-center-text u-margin-bottom-big">
+
+                    <h2 class="heading-secondary" style="color:#0000;!important; transform:none;color:black;">
+                        Contact Us
+                    </h2>
+                    <div style="margin-top:12px;">
+                    <h4 >Ready to get Started?</h4>
+                    <h4 style="margin: 15px;">
+                      Tell us more about your project or how we can assist you.</h4>
+                    <div>
+                    <button type="button" class="btn btn-primary btn-lg" style="background-color:#1e90ff;  margin-top: 15px;">GET IN TOUCH</button>
+                </div>
+                </div>
+
+              
+
+     
+            </div>
+       
+
+           
+            </section>
+        </main>
+
+        <footer class="footer" style="background-color:#1e90ff">
+            <div class="footer__logo-box">
+
+                <picture class="footer__logo">
+                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+                            media="(max-width: 37.5em)">
+                    <i class="fa fa-envelope  fa-lg" aria-hidden="true"></i>  hello@nopovotech.com
+                </picture>
+
+
+                
+            </div>
+            <div class="row">
+
+                                <div class="col-1-of-2">
+                    <div class="footer__navigation" style="border-top:none;">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a  href="https://nopovotech.com/" class="footer__link" style="background-color:#1e90ff; transform: none;color:#fff;">Home</a></li>
+                            <li class="footer__item"><a href="{% url 'index' %}" class="footer__link" style="background-color:#1e90ff; transform: none;color:#fff;">Who we are</a></li>
+                            <li class="footer__item"><a href="https://nopovotech.com/what-we-do/"  class="footer__link" style="background-color:#1e90ff; transform: none;color:#fff;">What we do</a></li>
+                            <li class="footer__item"><a href="https://nopovotech.com/job-application-form/" class="footer__link" style="background-color:#1e90ff; transform: none;color:#fff;">Jobs</a></li>
+                
+                            <li class="footer__item"><a href="https://nopovotech.com/contact/" class="footer__link" style="background-color:#1e90ff; transform: none;color:#fff;">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-1-of-2">
+              
+                    <p class="footer__copyright" style="text-align:center!important;">
+                   <i class="fab fa-instagram" style="text-align:center;"></i> Instagram
+                    </p>
+                </div>
+
+ 
+            </div>
+           
+        </footer>
+        <div style="background-color:#fff; padding:2px;">
+        
+              <p style="text-align: center;">&copy 2022 NopovoTech All Rights Reserved </p>
+        
+        </div>
+
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
+                    <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+                </div>
+                <div class="popup__right">
+                    <a href="#section-tours" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+                    <p class="popup__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Sed sed risus pretium quam. Aliquam sem et tortor consequat id. Volutpat odio facilisis mauris sit
+                        amet massa vitae. Mi bibendum neque egestas congue. Placerat orci nulla pellentesque dignissim enim
+                        sit. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget
+                        gravida cum sociis natoque penatibus et. Proin fermentum leo vel orci porta non pulvinar neque laoreet.
+                        Gravida neque convallis a cras semper. Molestie at elementum eu facilisis sed odio morbi quis. Faucibus
+                        vitae aliquet nec ullamcorper sit amet risus nullam eget. Nam libero justo laoreet sit. Amet massa
+                        vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet sed
+                        euismod nisi porta.
+                    </p>
+                    <a href="#" class="btn btn--green">Book now</a>
+                </div>
+            </div>
+        </div>
+
+        <!--
+        <section class="grid-test">
+            <div class="row">
+                <div class="col-1-of-2">
+                    Col 1 of 2
+                </div>
+                <div class="col-1-of-2">
+                    Col 1 of 2
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+                <div class="col-2-of-3">
+                    Col 2 of 3
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-2-of-4">
+                    Col 2 of 4
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-3-of-4">
+                    Col 3 of 4
+                </div>
+            </div>
+        </section>
+        -->
+
+    </body>
+</html>
+
+    {% for block in page.content %}
+        {% include_block block %}
+    {% endfor %}
+{% endblock %}

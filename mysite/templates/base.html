@@ -1,0 +1,217 @@
+{% load static wagtailuserbar menus_tags cache %}
+
+{% get_menu "main" as navigation %}
+{% load sass_tags %}
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+    <head>
+        <style>
+
+
+body {
+  font-family: Lato, sans-serif;
+  color: #777;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+h1 {
+  margin-right: 0px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  color: #878787;
+  font-size: 23px;
+  line-height: 44px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: rgba(33, 33, 33, 0.2) 0px 1px 0px, rgba(0, 0, 0, 0.93) 0px 1px 1px;
+}
+
+h3 {
+  margin-right: 0px;
+  margin-left: 0px;
+  border-bottom: 3px none #0cafeb;
+  color: #222;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+h4 {
+  margin: 10px 0px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+h5 {
+  margin: 10px 0px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+h6 {
+  margin: 10px 0px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+}
+p {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+
+#djDebugToolbar{
+  display: none !important;
+}
+.wagtail-userbar-nav{
+  display:none !important;
+}
+.wagtail-userbar--bottom-right{
+  display:none !important;
+
+}
+.footer__copyright {
+  border-top: 1px solid #fff !important;
+}
+
+   @media only screen and (min-width : 480px) {
+      .navbar-brand{
+        
+        color:#46b4eb;
+        font-size: 16px !important;
+
+      }
+
+    }
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center !important;
+}
+.contact-form .helptext {
+  display: block;
+  font-size: 110% !important;
+  color: #fff;
+}
+
+.b {
+font-size: 14px !important;
+font-weight: 500 !important;
+padding-right: 1.5rem !important;
+padding-left: 1.5rem!important;
+text-transform: uppercase;
+letter-spacing: 0;
+}
+input {
+       padding: 4px 9.5rem !important;
+      font-size: 15px !important;
+}
+textarea {
+  overflow: auto;
+  resize: vertical;
+  font-size: 15px !important;
+}
+.a {
+padding: 0.3rem  0.3rem;
+display: inline-block; 
+margin:unset !important;
+transition: none !important;
+position: relative;
+font-size: 12px;
+font-weight: 700;
+border-radius: 0px !important;
+background-color:#1e90ff !important;
+}
+
+li a:hover {
+  color: #1e90ff !important;
+}
+
+    </style>
+        <meta charset="utf-8" />
+        <title>
+            {% block title %}
+                {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+            {% endblock %}
+            {% block title_suffix %}
+                {% with self.get_site.site_name as site_name %}
+                    {% if site_name %}- {{ site_name }}{% endif %}
+                {% endwith %}
+            {% endblock %}
+        </title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {# Global stylesheets #}
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/mysite.css' %}">
+        <link href="{% sass_src 'sass/main.scss' %}" rel="stylesheet" type="text/css" />
+
+        {% block extra_css %}
+            {# Override this in templates to add extra stylesheets #}
+        {% endblock %}
+    </head>
+
+    <body class="{% block body_class %}{% endblock %}" style="padding:0; color:#000; background-color: #fff; overflow-x: hidden !important;">
+        {% wagtailuserbar %}
+
+     <nav class="navbar navbar-expand-lg  navbar-light fixed-top bg-light" style="background-color: #fff !important;">
+
+    <a class="navbar-brand" href="https://nopovotech.com/">      
+  <a class="navbar-brand" href="#" style="background-color:#fff; color:#1e90ff; font-size: 20px !important; margin: 7px !important;
+  font-weight: 500;
+">NOPOVOTECH</a>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto" >
+      <li class="nav-item active">
+        <a class="b nav-link" href="https://nopovotech.com/" >Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="b nav-link" href="{% url 'index' %}" style="color:#000; hover:{#fff};">WHO WE ARE</a>
+      </li>
+            <li class="nav-item">
+        <a class="b nav-link" href="https://nopovotech.com/what-we-do/" style="color:#000;">WHAT WE DO</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="b nav-link" href="https://nopovotech.com/job-application-form/" style="color:#000;">JOBS</a>
+      </li>
+
+
+    </ul>
+    <div style="visibility: hidden !important;">fj</div>
+    <button type="button" class="a b btn btn-primary" href="https://nopovotech.com/contact/" style="background-size: 11px;">GET IN TOUCH</button>
+  </div>
+          </nav>
+
+        {% block content %}{% endblock %}
+
+
+        {# Global javascript #}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="{% static 'js/mysite.js' %}"></script>
+
+        {% block extra_js %}
+            {# Override this in templates to add extra javascript #}
+        {% endblock %}
+    </body>
+</html>

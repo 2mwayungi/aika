@@ -1,0 +1,194 @@
+{% extends 'base.html' %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+
+    <style>
+        body {
+  font-family: Lato, sans-serif;
+  color: #fff;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+h1 {
+  margin-right: 0px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  color: #878787;
+  font-size: 23px;
+  line-height: 44px;
+
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: rgba(33, 33, 33, 0.2) 0px 1px 0px, rgba(0, 0, 0, 0.93) 0px 1px 1px;
+}
+h2 {
+  margin-top: 30px;
+  margin-right: 0px;
+  margin-left: 0px;
+  box-shadow: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  font-size: 45px;
+  line-height: 36px;
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0px;
+  text-transform: none !important;
+  text-shadow: none !important;
+ 
+}
+h3 {
+  margin-right: 0px;
+  margin-left: 0px;
+  border-bottom: 3px none #0cafeb;
+  color: #222;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+h4 {
+  margin: 10px 0px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+}
+h5 {
+  margin: 10px 0px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+h6 {
+  margin: 10px 0px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+}
+p {
+
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+        .container {
+  font-family: arial;
+  padding: 2rem;
+
+ 
+ 
+
+  /* Center child horizontally*/
+  display: flex;
+  justify-content: center;
+}
+        .contact-form {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .contact-form li {
+            margin-bottom: 1.5rem;
+        }
+        .contact-form label {
+            display: block;
+            font-weight: bold;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+        .contact-form .helptext {
+            display: block;
+            font-size: 110%;
+            color: #fff;
+        }
+        .f {
+    display:flex !important;
+    justify-content: center !important;
+}
+#djDebug{
+    display: none !important;
+}
+.foo{
+    background-color: #fff;
+    text-align: center;
+}
+.footer__link:link, .footer__link:visited {
+    color:unset !important;
+    background-color: unset !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: unset !important;
+    transition:unset !important; }
+ .footer__link:hover, .footer__link:active {
+    color: unset !important;
+    box-shadow: none !important;
+    transform: none !important;}
+.footer__copyright {
+    
+      padding-top: 2rem;
+  }
+    </style>
+    <section style="background-color: #1e90ff !important;">
+        <h2 style="text-align:center !important;padding-top: 4rem; color:#fff;font-size: 2rem;
+
+font-weight: 700;
+letter-spacing: .2rem;">{{ page.title }}</h2>
+            <h2 style="text-align:center !important;padding: 0.5rem 0; color:#fff;font-size: 1.7rem;
+text-transform: uppercase;
+letter-spacing: .2rem;font-weight: 700 !important;">{{ self.intro|richtext }}</h2> 
+
+
+    <div class="f container mt-5 mb-5" style="text-align:center !important;" >
+
+
+        <form action="{% pageurl page %}" method="POST">
+            {% csrf_token %}
+            <ul class="contact-form" size="19" style="color:"#0000";>
+                {{ form.as_ul }}
+            </ul>
+
+            <input type="submit">
+        </form>
+    </div>
+    <div class ="foo" style="padding:2rem 0;">
+        <p>
+        <i class="fa fa-envelope  fa-sm" aria-hidden="true"></i>  hello@nopovotech.com
+    </p>
+    </div>
+                        <footer class="footer" style="background-color:#1e90ff !important;">
+
+            <div class="row">
+
+                                <div class="col-1-of-2">
+                    <div class="footer__navigation" style="border-top:none;">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a  href="https://nopovotech.com/" class="footer__link" style="background-color:#1e90ff transform: none;color:#fff;">Home</a></li>
+                            <li class="footer__item"><a href="{% url 'index' %}" class="footer__link" style="background-color:#1e90ff transform: none;color:#fff;">Who we are</a></li>
+                            <li class="footer__item"><a href="https://nopovotech.com/what-we-do/"  class="footer__link" style="background-color:#1e90ff transform: none;color:#fff;">What we do</a></li>
+                            <li class="footer__item"><a href="https://nopovotech.com/job-application-form/" class="footer__link" style="background-color:#1e90ff transform: none;color:#fff;">Jobs</a></li>
+                
+                            <li class="footer__item"><a href="https://nopovotech.com/contact/" class="footer__link" style="background-color:#1e90ff transform: none;color:#fff;">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-1-of-2">
+              
+                    <p class="footer__copyright" style="text-align:center !important;">
+                   <i class="fab fa-instagram" style="text-align:center;"></i> Instagram
+                    </p>
+                </div>
+
+ 
+            </div>
+           
+        </footer>
+
+
+
+{% endblock %}
